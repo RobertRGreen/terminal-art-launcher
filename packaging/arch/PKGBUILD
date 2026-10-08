@@ -1,6 +1,6 @@
 # Maintainer: Robert Green <robertrhysg@gmail.com>
 pkgname=terminal-art-launcher
-pkgver=0.2.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc='Terminal candy launcher, installer, and workspace presets for Arch Linux'
 arch=('x86_64' 'aarch64')
@@ -21,7 +21,7 @@ optdepends=(
   'cava: audio spectrum visualizer'
 )
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('f88100c191dc63e1e70c847baeb8471df31e0ff15a16a0cedef52a56cc4797d6')
+sha256sums=('d0ebe536ac0132c0e7744b7b98bfbf6ba1d332cc6b81309714f4985412bd3682')
 
 prepare() {
   cd "$pkgname-$pkgver"
