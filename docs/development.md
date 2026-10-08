@@ -66,6 +66,22 @@ python3 scripts/install_smoke_test.py
   starfetch. It tests effect rendering/exit in a controlling PTY. It does not
   rearrange desktop windows.
 
+For release validation against real installed programs, run:
+
+```sh
+python3 scripts/catalog_smoke_test.py --output .capture/catalog-validation
+```
+
+This opt-in test uses the installed `art` command, real program executables,
+network services, GPU monitoring, and the current audio service. It launches
+each catalog entry in a separate PTY, checks static exit status or continuous
+output, and verifies return to the gallery. Oneko uses an isolated Xvfb display
+(`xorg-server-xvfb`) and checks for framebuffer changes. Missing programs and
+skipped checks produce a nonzero test result. Use `--program NAME` to rerun one
+entry. Logs may contain machine details; keep them out of the public repository.
+These are launch/render/return smoke checks, not exhaustive tests of every
+program feature, audio response, GPU model, or live data provider.
+
 Do not use the user's Spotify desktop as a test fixture. Mocked tests establish
 command construction and orchestration; they do not prove every compositor or
 third-party application behavior. Keep this distinction in release notes.

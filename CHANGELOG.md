@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Fix toilet launching on current Arch builds by using the `rainbow` filter.
+- Add opt-in real-catalog launch/render/return smoke tests and isolated Oneko testing.
+
 ## 0.2.1
 
 - Add Terrascope to the Space collection, bringing the catalog to 24 entries.

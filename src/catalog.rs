@@ -48,7 +48,7 @@ pub const ENTRIES: &[Entry] = &[
     entry!("htop","System","htop","htop","An interactive process viewer. Inspect processes and resource usage.",&[],None,true,false,false),
     entry!("nvtop","System","nvtop","nvtop","Live GPU activity and process monitoring; hardware support depends on your driver.",&[],None,true,false,false),
     entry!("figlet","Text","figlet","figlet","Turn words into oversized ASCII lettering. Launches with a TERMINAL ART sample.",&["TERMINAL ART"],None,false,false,false),
-    entry!("toilet","Text","toilet","toilet","Bold terminal typography with colorful effects.",&["-F","gay","ART"],None,false,false,false),
+    entry!("toilet","Text","toilet","toilet","Bold terminal typography with colorful effects.",&["-F","rainbow","ART"],None,false,false,false),
     entry!("cowsay","Text","cowsay","cowsay","A friendly ASCII cow with a message for your terminal.",&["Make room for a little terminal art."],None,false,false,false),
     entry!("ponysay","Text","ponysay","ponysay","Colorful pony illustrations deliver a cheerful message.",&["Your terminal is a canvas."],None,false,false,false),
     entry!("fortune","Text","fortune","fortune-mod","A small dose of wisdom, wit, or delightful nonsense.",&[],None,false,false,false),
