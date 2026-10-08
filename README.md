@@ -117,7 +117,8 @@ bar. Missing entries stay visible so you can still inspect and install them.
 
 ## Workspace presets
 
-Press **P**, select **Spotify**, and press **Enter**, or run:
+After saving a preset (for example **Spotify**), press **P**, select it, and
+press **Enter**. You can also run:
 
 ```sh
 art --preset Spotify

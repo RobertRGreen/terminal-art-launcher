@@ -60,6 +60,8 @@ python3 scripts/install_smoke_test.py
   XDG directories, and a fixture program. It verifies preset listing/launching,
   no-op restoration, movement without resizing, correct floating actions, gated
   startup after placement, and socket cleanup. It never contacts the real desktop.
+- `install_smoke_test.py` uses a fake manager to verify bulk planning, dry runs,
+  source/AUR skips, exact command arguments, and the root-user guard.
 - `space_smoke_test.py` is optional and requires installed astroterm, globe, and
   starfetch. It tests effect rendering/exit in a controlling PTY. It does not
   rearrange desktop windows.
