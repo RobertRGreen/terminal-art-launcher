@@ -1,0 +1,50 @@
+.TH ART 1 "October 2026" "art 0.2.0" "User Commands"
+.SH NAME
+art \- Arch Linux terminal candy launcher, installer, and preset manager
+.SH SYNOPSIS
+.B art
+.RI [ --no-splash | --list | --help | --version ]
+.br
+.B art install
+.RI ( --all | CATEGORY | PROGRAM )
+.RB [ --dry-run ]
+.br
+.B art --preset
+.I NAME
+.br
+.B art preset
+.RI ( list | "show NAME" | "launch NAME" | "save NAME" )
+.RB [ --workspace " N" ]
+.RB [ --replace ]
+.SH DESCRIPTION
+Browse a curated catalog of terminal art, install missing programs with pacman,
+yay, or paru, and launch them from a fullscreen interface.
+Workspace presets support Hyprland's Lua API and Kitty remote control.
+.SH KEYS
+Arrow keys select programs and categories. Enter launches, slash searches,
+F toggles favorites, I installs, R launches randomly, and Esc quits.
+A runs an animation sequence, M cycles Matrix effects, S starts a screensaver,
+C opens configuration, P opens presets, and U refreshes discovery.
+.PP
+During automatic playback, Esc, Q, or Ctrl-C stops; Space or Right skips.
+In the preset menu, Enter restores and N saves the current workspace.
+.SH INSTALLATION
+.B art install --all
+installs missing catalog packages supported by the available manager.
+Pacman-only installations skip AUR entries. Source-only entries are reported
+and skipped. Native package-manager confirmation and AUR review remain enabled.
+.SH FILES
+.I $XDG_CONFIG_HOME/terminal-art-launcher/config.toml
+.br
+.I $XDG_CONFIG_HOME/terminal-art-launcher/presets/*.json
+.PP
+XDG_CONFIG_HOME defaults to ~/.config. Presets contain executable command
+arguments and should only be imported from trusted sources.
+.SH LIMITATIONS
+Presets capture one Kitty pane per operating-system window. Spotify's mini-player
+must already be open to be repositioned. Screensaver mode does not lock the session.
+.SH AUTHORS
+Robert Green and contributors.
+.SH SEE ALSO
+.BR pacman (8),
+.BR kitty (1)

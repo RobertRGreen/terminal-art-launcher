@@ -1,0 +1,29 @@
+name: Arch Linux checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: archlinux:base-devel
+    steps:
+      - name: Install Arch build dependencies
+        run: pacman -Syu --noconfirm --needed git rust python
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Use a regular build user
+        run: |
+          useradd --create-home builder
+          chown -R builder:builder .
+      - name: Check Rust formatting and lint
+        run: |
+          runuser -u builder -- cargo fmt --check
+          runuser -u builder -- cargo clippy --all-targets --locked -- -D warnings
+      - name: Unit and isolated integration tests
+        run: |
+          runuser -u builder -- cargo test --locked
+          runuser -u builder -- cargo build --locked
+          runuser -u builder -- python3 scripts/smoke_test.py
+          runuser -u builder -- python3 scripts/presets_smoke_test.py
+          runuser -u builder -- python3 scripts/install_smoke_test.py

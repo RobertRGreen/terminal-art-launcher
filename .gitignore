@@ -1,0 +1,9 @@
+/target/
+*.tmp
+/.capture/
+
+/docs/local-setup.md
+*.pkg.tar.*
+/packaging/arch/src/
+/packaging/arch/pkg/
+/packaging/arch/*.tar.gz

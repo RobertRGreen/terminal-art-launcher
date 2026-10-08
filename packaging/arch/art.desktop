@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Art — Terminal Candy
+Comment=Browse, install, and launch terminal art
+Exec=art
+Icon=utilities-terminal
+Terminal=true
+Categories=System;Utility;
+Keywords=terminal;art;ascii;screensaver;Arch;
