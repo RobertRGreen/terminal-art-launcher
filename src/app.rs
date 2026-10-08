@@ -148,12 +148,13 @@ mod tests {
         app.usable.fill(true);
         app.query = "space".into();
         let space: Vec<_> = app.visible().into_iter().map(|i| ENTRIES[i].id).collect();
-        assert_eq!(space, ["astroterm", "globe", "starfetch"]);
+        assert_eq!(space, ["astroterm", "globe", "starfetch", "terrascope"]);
         for mode in ['a', 's'] {
             let pool: Vec<_> = app.pool(mode).into_iter().map(|i| ENTRIES[i].id).collect();
             assert!(pool.contains(&"astroterm"));
             assert!(pool.contains(&"globe"));
             assert!(!pool.contains(&"starfetch"));
+            assert!(!pool.contains(&"terrascope"));
         }
         let starfetch = ENTRIES.iter().position(|e| e.id == "starfetch").unwrap();
         app.installed[starfetch] = false;

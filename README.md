@@ -81,7 +81,7 @@ Effect process groups are terminated and reaped between transitions.
 | Text | figlet, toilet, cowsay, ponysay, fortune, lolcat |
 | Visualizers | cava |
 | Utilities | wttr.in, tty-clock |
-| Space | astroterm, globe, starfetch |
+| Space | astroterm, globe, starfetch, terrascope |
 
 Discovery checks executable permissions on PATH every launch and refresh.
 The gallery intentionally retains missing entries with **Not Installed**,
@@ -201,7 +201,7 @@ Licensed under MIT.
 
 ## Space
 
-The **Space** sidebar collection adds three programs:
+The **Space** sidebar collection includes these programs:
 
 - [astroterm](https://github.com/da-luce/astroterm): an animated planetarium
   with stars, planets, and constellation lines. The launcher uses a colorful,
@@ -217,7 +217,17 @@ The **Space** sidebar collection adds three programs:
   source and `make` instructions. Resource files must be installed alongside
   the program at the resource path compiled into `src/starfetch.cpp`.
 
-Search `/space` from All to find all three. Astroterm and globe participate in
+- [Terrascope](https://github.com/a-shygun/Terrascope): an interactive Braille
+  Earth map with weather, aircraft, earthquakes, and day/night layers. First-run
+  maps and live layers need internet; upstream supports `--offline` for cached
+  data. Quit with Q. It stays out of automatic playback because it is interactive.
+  The launch recipe disables terminal-palette redefinition to preserve your colors.
+  No published Arch/AUR package was found when this entry was added. Use
+  upstream's [Arch PKGBUILD](https://github.com/a-shygun/Terrascope/tree/main/packaging/arch),
+  or `pipx install terrascope` after installing Arch's `python-pipx` package.
+  The gallery discovers either installation on PATH and provides a manual-install hint.
+
+Search `/space` from All to find all four. Astroterm and globe participate in
 A (animation sequence) and S (screensaver); static starfetch cards do not.
 
 Upstream installation options and package mappings are listed above. Source-only

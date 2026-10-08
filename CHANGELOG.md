@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1
+
+- Add Terrascope to the Space collection, bringing the catalog to 24 entries.
+- Document upstream installation options and network requirements.
+- Keep Terrascope out of automated playback; it opens as an interactive map.
+
 ## 0.2.0 — First public release
 
 - Rust/ratatui fullscreen terminal candy gallery with 23 curated entries.

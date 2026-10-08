@@ -62,6 +62,10 @@ pub const ENTRIES: &[Entry] = &[
         install_hint: Some("Build Haruno19/starfetch from source; see README Space section."),
         ..entry!("starfetch","Space","starfetch","starfetch","Colorful constellation art and astronomy facts. Each launch selects a random constellation; output stays visible until Enter.",&["-c","cyan"],None,false,false,false)
     },
+    Entry {
+        install_hint: Some("Use pipx install terrascope, or upstream's packaging/arch/PKGBUILD; no published Arch/AUR package yet."),
+        ..entry!("terrascope","Space","terrascope","terrascope","Interactive Braille Earth map with weather, aircraft, earthquakes, and day/night layers. First-run map downloads and live layers use the network. Q quits.",&["--no-redefine-palette"],None,true,false,false)
+    },
 ];
 pub const CATEGORIES: &[&str] = &[
     "All",
@@ -103,6 +107,6 @@ mod tests {
                 .all(|c| c.is_ascii_alphanumeric() || "-._+".contains(c)));
             assert!(!e.matrix || e.cycle);
         }
-        assert_eq!(ENTRIES.len(), 23);
+        assert_eq!(ENTRIES.len(), 24);
     }
 }
