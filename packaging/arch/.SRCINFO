@@ -1,0 +1,26 @@
+pkgbase = terminal-art-launcher
+	pkgdesc = Terminal candy launcher, installer, and workspace presets for Arch Linux
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/RobertRGreen/terminal-art-launcher
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = cargo
+	depends = glibc
+	depends = gcc-libs
+	depends = pacman
+	optdepends = sudo: install packages with pacman as a regular user
+	optdepends = kitty: save and restore terminal workspace presets
+	optdepends = hyprland: restore desktop workspace layouts
+	optdepends = yay: install terminal candy from the AUR
+	optdepends = paru: alternative AUR helper
+	optdepends = astroterm: animated terminal planetarium
+	optdepends = cmatrix: digital rain animation
+	optdepends = asciiquarium: ASCII aquarium
+	optdepends = cava: audio spectrum visualizer
+	options = !debug
+	source = terminal-art-launcher-0.2.0.tar.gz::https://github.com/RobertRGreen/terminal-art-launcher/archive/refs/tags/v0.2.0.tar.gz
+	sha256sums = f88100c191dc63e1e70c847baeb8471df31e0ff15a16a0cedef52a56cc4797d6
+
+pkgname = terminal-art-launcher
