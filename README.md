@@ -226,6 +226,10 @@ The **Space** sidebar collection includes these programs:
   upstream's [Arch PKGBUILD](https://github.com/a-shygun/Terrascope/tree/main/packaging/arch),
   or `pipx install terrascope` after installing Arch's `python-pipx` package.
   The gallery discovers either installation on PATH and provides a manual-install hint.
+  If the portable build reports `CERTIFICATE_VERIFY_FAILED`, use the Python
+  installation above so it uses the system certificate store. Check
+  `~/.cache/terrascope/terrascope.log` for download errors; keep TLS verification
+  enabled. After switching installations, close and reopen Terrascope.
 
 Search `/space` from All to find all four. Astroterm and globe participate in
 A (animation sequence) and S (screensaver); static starfetch cards do not.
